@@ -8,7 +8,7 @@
 
 ![Menu fuer Abfrage](pics/Pins_Menu_2.png) 
 
-## Entfernung Frequenz
+## Wenn Bewegung dann ROT
 
 ![Das Programm ](pics/MiniPIR_Sensor.png)
 
