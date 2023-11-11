@@ -1,4 +1,4 @@
-radio.onReceivedNumber(function (receivedNumber) {
+radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
     if (receivedNumber == 1) {
         basic.showIcon(IconNames.Happy)
     } else if (receivedNumber == 2) {
@@ -8,12 +8,14 @@ radio.onReceivedNumber(function (receivedNumber) {
     } else {
         wuerfeln()
     }
+    
 })
-input.onButtonPressed(Button.A, function () {
+input.onButtonPressed(Button.A, function on_button_pressed_a() {
     basic.showArrow(ArrowNames.North)
     radio.sendNumber(1)
 })
-function wuerfeln () {
+function wuerfeln() {
+    
     basic.showLeds(`
         . . . . .
         . . # . .
@@ -55,15 +57,7 @@ function wuerfeln () {
         `)
     basic.pause(500)
     zufall = randint(1, 6)
-    if (zufall == 5) {
-        basic.showLeds(`
-            # . . . #
-            . . . . .
-            . . # . .
-            . . . . .
-            # . . . #
-            `)
-    } else if (zufall == 1) {
+    if (zufall == 1) {
         basic.showLeds(`
             . . . . .
             . . . . .
@@ -95,6 +89,14 @@ function wuerfeln () {
             . . . . .
             # . . . #
             `)
+    } else if (zufall == 5) {
+        basic.showLeds(`
+            # . . . #
+            . . . . .
+            . . # . .
+            . . . . .
+            # . . . #
+            `)
     } else if (zufall == 6) {
         basic.showLeds(`
             # . . . #
@@ -106,17 +108,19 @@ function wuerfeln () {
     } else {
         basic.showString("error!")
     }
+    
 }
-input.onGesture(Gesture.Shake, function () {
+
+input.onGesture(Gesture.Shake, function on_gesture_shake() {
     basic.showArrow(ArrowNames.North)
     radio.sendNumber(4)
     wuerfeln()
 })
-input.onButtonPressed(Button.AB, function () {
+input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
     basic.showArrow(ArrowNames.North)
     radio.sendNumber(3)
 })
-input.onButtonPressed(Button.B, function () {
+input.onButtonPressed(Button.B, function on_button_pressed_b() {
     basic.showArrow(ArrowNames.North)
     radio.sendNumber(2)
 })
