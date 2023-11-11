@@ -1,0 +1,36 @@
+basic.showIcon(IconNames.Skull)
+WSTouchPiano.TP_ShowRGB(
+WSTouchPiano.TP_SetRGB(255, 0, 0),
+WSTouchPiano.TP_SetRGB(0, 255, 0),
+WSTouchPiano.TP_SetRGB(0, 0, 255),
+WSTouchPiano.TP_SetRGB(255, 255, 0)
+)
+WSTouchPiano.TP_PlayMusic(330, music.beat(BeatFraction.Whole))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(330, music.beat(BeatFraction.Whole))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(330, music.beat(BeatFraction.Whole))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(262, music.beat(BeatFraction.Half))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(392, music.beat(BeatFraction.Half))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(330, music.beat(BeatFraction.Whole))
+music.rest(music.beat(BeatFraction.Whole))
+WSTouchPiano.TP_PlayMusic(494, music.beat(BeatFraction.Whole))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(494, music.beat(BeatFraction.Whole))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(494, music.beat(BeatFraction.Whole))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(523, music.beat(BeatFraction.Half))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(392, music.beat(BeatFraction.Half))
+music.rest(music.beat(BeatFraction.Half))
+WSTouchPiano.TP_PlayMusic(330, music.beat(BeatFraction.Whole))
+basic.pause(5000)
+basic.showArrow(ArrowNames.South)
+basic.forever(function () {
+    WSTouchPiano.TP_PlayPiano()
+})
+
